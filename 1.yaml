@@ -225,7 +225,7 @@ rule-providers:
   pikpak_domain:
     <<: *domain
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/pikpak.mrs"
-    googleplay_domain:
+  googleplay_domain:
     <<: *domain
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google-play.mrs"
   personal_proxy_domain:
