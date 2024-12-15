@@ -115,7 +115,7 @@ proxy-groups:
 
   - name: Personal_Direct
     type: select
-    proxies: [默认]
+    proxies: [直连]
 
   - name: China
     type: select
