@@ -109,6 +109,10 @@ proxy-groups:
     type: select
     proxies: [默认,香港,台湾,日本,新加坡,美国,全部节点]
 
+- name: GooglePlay
+    type: select
+    proxies: [默认,香港,台湾,日本,新加坡,美国,全部节点]
+    
   - name: Personal_Proxy
     type: select
     proxies: [默认]
@@ -179,6 +183,7 @@ rules:
   - RULE-SET,openai_domain,OpenAI
   - RULE-SET,onedrive_domain,OneDrive
   - RULE-SET,pikpak_domain,PikPak
+  - RULE-SET,googleplay_domain,GooglePlay
   - RULE-SET,terabox_domain,TeraBox
   - RULE-SET,personal_proxy_domain,Personal_Proxy
   - RULE-SET,personal_direct_domain,Personal_Direct
@@ -220,6 +225,9 @@ rule-providers:
   pikpak_domain:
     <<: *domain
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/pikpak.mrs"
+    googleplay_domain:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google-play.mrs"
   personal_proxy_domain:
     <<: *domain
     url: "https://raw.githubusercontent.com/phenixhub/Clash-for-Windows-Rulesets/refs/heads/main/personal_proxy.list"
