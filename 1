@@ -84,14 +84,6 @@ proxy-groups:
     type: select
     proxies: [自动选择,直连,香港,台湾,日本,新加坡,美国,其它地区,全部节点]
 
-  - name: Google
-    type: select
-    proxies: [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,直连]
-
-  - name: Telegram
-    type: select
-    proxies: [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,直连]
-
   - name: Twitter
     type: select
     proxies: [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,直连]
@@ -173,8 +165,6 @@ rules:
   - RULE-SET,github_domain,Github
   - RULE-SET,twitter_domain,Twitter
   - RULE-SET,youtube_domain,YouTube
-  - RULE-SET,google_domain,Google
-  - RULE-SET,telegram_domain,Telegram
   - RULE-SET,netflix_domain,NETFLIX
   - RULE-SET,bilibili_domain,哔哩哔哩
   - RULE-SET,bahamut_domain,巴哈姆特
@@ -182,9 +172,7 @@ rules:
   - RULE-SET,cn_domain,国内
   - RULE-SET,geolocation-!cn,其他
 
-  - RULE-SET,google_ip,Google
   - RULE-SET,netflix_ip,NETFLIX
-  - RULE-SET,telegram_ip,Telegram
   - RULE-SET,twitter_ip,Twitter
   - RULE-SET,cn_ip,国内
   - MATCH,其他
@@ -214,12 +202,6 @@ rule-providers:
   youtube_domain:
     <<: *domain
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"
-  google_domain:
-    <<: *domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"
-  telegram_domain:
-    <<: *domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"
   netflix_domain:
     <<: *domain
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs"
@@ -245,15 +227,9 @@ rule-providers:
   cn_ip:
     <<: *ip
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs"
-  google_ip:
-    <<: *ip
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs"
   netflix_ip:
     <<: *ip
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.mrs"
   twitter_ip:
     <<: *ip
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/twitter.mrs"
-  telegram_ip:
-    <<: *ip
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs"
