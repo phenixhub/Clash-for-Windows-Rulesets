@@ -16,7 +16,7 @@ proxies:
 
 mixed-port: 7890
 ipv6: true
-allow-lan: true
+allow-lan: false
 unified-delay: false
 tcp-concurrent: true
 external-controller: 127.0.0.1:9090
@@ -45,7 +45,7 @@ sniffer:
     - "+.push.apple.com"
 
 tun:
-  enable: true
+  enable: false
   stack: mixed
   dns-hijack:
     - "any:53"
@@ -55,7 +55,7 @@ tun:
   auto-detect-interface: true
 
 dns:
-  enable: true
+  enable: false
   ipv6: true
   respect-rules: true
   enhanced-mode: fake-ip
